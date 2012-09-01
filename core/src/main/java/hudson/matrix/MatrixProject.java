@@ -414,6 +414,8 @@ public class MatrixProject extends AbstractProject<MatrixProject,MatrixBuild> im
     }
     
     public MatrixDeleteStrategy getDeleteStrategy() {
+        if (deleteStrategy==null)
+            deleteStrategy = new DefaultMatrixDeleteStrategy();
         return deleteStrategy;
     }
     
@@ -475,7 +477,6 @@ public class MatrixProject extends AbstractProject<MatrixProject,MatrixBuild> im
     @Override
     public void onCreatedFromScratch() {
         executionStrategy = new DefaultMatrixExecutionStrategyImpl();
-        deleteStrategy = new DefaultMatrixDeleteStrategy();
         super.onCreatedFromScratch();
     }
 
