@@ -12,21 +12,10 @@ import hudson.model.AbstractDescribableImpl;
  * @since 1.481
  */
 public abstract class MatrixDeleteStrategy extends AbstractDescribableImpl<MatrixDeleteStrategy> implements ExtensionPoint {
-    
-    public abstract void doDelete(MatrixBuild b) throws MatrixDeleteException, IOException;
+    public abstract void doDelete(MatrixBuild b) throws IOException;
     
     @Override
     public MatrixDeleteStrategyDescriptor getDescriptor() {
         return (MatrixDeleteStrategyDescriptor)super.getDescriptor();
     }
-
-    public static class MatrixDeleteException extends RuntimeException {
-        
-        public MatrixDeleteException(String message) {
-            super(message);
-        }
-        
-        private static final long serialVersionUID = 1L;
-    }
-    
 }
