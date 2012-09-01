@@ -33,7 +33,6 @@ import hudson.Extension;
 import hudson.Util;
 import hudson.XmlFile;
 import hudson.matrix.MatrixBuild.MatrixBuildExecution;
-import hudson.matrix.MatrixDeleteStrategy.MatrixDeleteStrategyDescriptor;
 import hudson.model.AbstractProject;
 import hudson.model.Action;
 import hudson.model.BuildableItemWithBuildWrappers;
