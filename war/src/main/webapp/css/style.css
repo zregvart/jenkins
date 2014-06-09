@@ -223,6 +223,14 @@ pre.console {
   width: 2em;
 }
 
+.setting-entry, .optional-block {
+  margin-top: 15px;
+}
+
+.setting-name {
+  font-weight: bold;
+}
+
 .setting-main, .setting-help {
   display: inline-block;
 }
