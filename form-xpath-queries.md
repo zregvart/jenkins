@@ -47,7 +47,7 @@ The following table records the form tags and their contextual locations
 <tr><td>table</td><td>optionalProperty</td><td>N/A</td><td>includes descriptor config pages expecting <code>tr</code> children</td></tr>
 <tr><td>*</td><td>password</td><td>N/A</td><td></td></tr>
 <tr><td>*</td><td>prepareDatabinding</td><td>N/A</td><td></td></tr>
-<tr><td>table</td><td>property</td><td>tr</td><td></td></tr>
+<tr><td>table</td><td>property</td><td>N/A</td><td>includes descriptor config pages expecting <code>tr</code> children</td></tr>
 <tr><td>*</td><td>radio</td><td>N/A</td><td></td></tr>
 <tr><td>table</td><td>radioBlock</td><td>tr</td><td></td></tr>
 <tr><td>*</td><td>readOnlyTextbox</td><td>N/A</td><td></td></tr>
