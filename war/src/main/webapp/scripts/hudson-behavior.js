@@ -1029,7 +1029,7 @@ var jenkinsRules = {
         applyNameRef(start,end,ref);
     },
 
-    "TR.optional-block-start ": function(e) { // see optionalBlock.jelly
+    "DIV.optional-block ": function(e) { // see optionalBlock.jelly
         // this is suffixed by a pointless string so that two processing for optional-block-start
         // can sandwitch row-set-end
         // this requires "TR.row-set-end" to mark rows
@@ -1318,25 +1318,22 @@ function applyNameRef(s,e,id) {
 // used by optionalBlock.jelly to update the form status
 //   @param c     checkbox element
 function updateOptionalBlock(c,scroll) {
-    // find the start TR
+    // find the DIV
     var s = $(c);
-    while(!s.hasClassName("optional-block-start"))
+    while(!s.hasClassName("optional-block"))
         s = s.up();
 
     // find the beginning of the rowvg
-    var vg =s;
-    while (!vg.hasClassName("rowvg-start"))
-        vg = vg.next();
+    var vg = findElementsBySelector(s, "DIV.rowvg")[0];
 
     var checked = xor(c.checked,Element.hasClassName(c,"negative"));
 
-    vg.rowVisibilityGroup.makeInnerVisisble(checked);
+    vg.style.display = checked ? "" : "none";
 
     if(checked && scroll) {
         var D = YAHOO.util.Dom;
 
         var r = D.getRegion(s);
-        r = r.union(D.getRegion(vg.rowVisibilityGroup.end));
         scrollIntoView(r);
     }
 
@@ -1344,7 +1341,7 @@ function updateOptionalBlock(c,scroll) {
         // Hack to hide tool home when "Install automatically" is checked.
         var homeField = findPreviousFormItem(c, 'home');
         if (homeField != null && homeField.value == '') {
-            var tr = findAncestor(homeField, 'TR');
+            var tr = findAncestor(homeField, 'DIV');
             if (tr != null) {
                 tr.style.display = c.checked ? 'none' : '';
                 layoutUpdateCallback.call();
