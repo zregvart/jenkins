@@ -28,16 +28,16 @@ The following table records the form tags and their contextual locations
 <tr><td>table</td><td>dropdownDescriptorSelector</td><td>when <code>dropdownListMode=='createSelectField'</code> then <code>option</code><br/>when <code>dropdownListMode=='generateEntries'</code> then <code>tr</code></td></tr>
 <tr><td>table</td><td>dropdownList</td><td>when <code>dropdownListMode=='createSelectField'</code> then <code>option</code><br/>when <code>dropdownListMode=='generateEntries'</code> then <code>tr</code></td></tr>
 <tr><td>when <code>dropdownListMode=='createSelectField'</code> then <code>select</code><br/>when <code>dropdownListMode=='generateEntries'</code> then <code>table</code></td><td>dropdownListBlock</td><td>tr</td></tr>
-<tr><td></td><td>editableComboBox</td><td></td></tr>
-<tr><td></td><td>editableComboBoxValue</td><td></td></tr>
+<tr><td>*</td><td>editableComboBox</td><td>*</td></tr>
+<tr><td>*</td><td>editableComboBoxValue</td><td>N/A</td></tr>
 <tr><td>table</td><td>entry</td><td>*</td></tr>
-<tr><td></td><td>enum</td><td></td></tr>
-<tr><td></td><td>enumSet</td><td></td></tr>
-<tr><td></td><td>expandableTextbox</td><td></td></tr>
-<tr><td>*</td><td>form</td><td></td></tr>
-<tr><td></td><td>helpArea</td><td></td></tr>
-<tr><td></td><td>hetero-list</td><td></td></tr>
-<tr><td></td><td>hetero-radio</td><td></td></tr>
+<tr><td>*</td><td>enum</td><td>CDATA or other text</td></tr>
+<tr><td>*</td><td>enumSet</td><td>N/A</td></tr>
+<tr><td>*</td><td>expandableTextbox</td><td>N/A</td></tr>
+<tr><td>*</td><td>form</td><td>tr</td></tr>
+<tr><td>table</td><td>helpArea</td><td>N/A</td></tr>
+<tr><td>*</td><td>hetero-list</td><td>*</td></tr>
+<tr><td>*</td><td>hetero-radio</td><td>N/A</td></tr>
 <tr><td></td><td>invisibleEntry</td><td></td></tr>
 <tr><td>table</td><td>nested</td><td>*</td></tr>
 <tr><td></td><td>number</td><td></td></tr>
