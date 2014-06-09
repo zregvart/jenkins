@@ -40,8 +40,7 @@ THE SOFTWARE.
     </st:attribute>
   </st:documentation>
 
-	<tr><td/><td/>
-	  <td>
+	<div>
       <st:adjunct includes="lib.form.advanced.advanced"/>
 
 	    <div class="advancedLink" style="${attrs.align!=null?('text-align:'+attrs.align):''}">
@@ -52,10 +51,10 @@ THE SOFTWARE.
 	      <input type="button" value="${attrs.title?:'%Advanced'}..." class="advanced-button advancedButton" /><!-- advancedButton is legacy -->
 	    </div>
             <j:new var="customizedFields" className="java.util.TreeSet"/>
-	    <table class="advancedBody"><tbody>
+	    <div class="advancedBody">
 	    <!-- this is the hidden portion that hosts the "advanced" part. Contents will be moved to the master table when "advanced..." is clicked -->
 	      <d:invokeBody/>
-	    </tbody></table>
+	    </div>
             <j:if test="${!customizedFields.isEmpty()}">
               <script>
                   {
@@ -68,6 +67,5 @@ THE SOFTWARE.
                   }
               </script>
             </j:if>
-	  </td>
-	</tr>
+	  </div>
 </j:jelly>

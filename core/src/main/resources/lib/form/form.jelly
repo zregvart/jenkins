@@ -50,7 +50,7 @@ THE SOFTWARE.
     </st:attribute>
   </st:documentation>
   <form action="${action}" method="${method}" enctype="${attrs.enctype}" name="${name}" target="${attrs.target}">
-    <div class="setting-form ${attrs.tableClass}">
+    <div class="setting-form setting-container ${attrs.tableClass}">
       <d:invokeBody/>
     </div>
   </form>
