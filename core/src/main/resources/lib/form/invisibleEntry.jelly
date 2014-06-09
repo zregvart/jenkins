@@ -27,9 +27,7 @@ THE SOFTWARE.
   <st:documentation>
     Invisible &lt;f:entry> type. Useful for adding hidden field values.
   </st:documentation>
-  <tr style="display:none">
-    <td>
+  <div style="display:none">
       <d:invokeBody />
-    </td>
-  </tr>
+  </div>
 </j:jelly>

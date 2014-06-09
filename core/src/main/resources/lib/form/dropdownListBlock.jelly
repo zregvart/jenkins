@@ -50,11 +50,10 @@ THE SOFTWARE.
     </j:when>
     <j:when test="${dropdownListMode=='generateEntries'}">
       <!-- sandwich them by markers so that we know what to show/hide -->
-      <tr class="dropdownList-start rowvg-start">
+      <div class="dropdownList rowvg">
         <j:if test="${!empty(attrs.staplerClass)}">
-          <td style="display:none"><input type="hidden" name="stapler-class" value="${attrs.staplerClass}"/></td>
+          <span style="display:none"><input type="hidden" name="stapler-class" value="${attrs.staplerClass}"/></span>
         </j:if>
-      </tr>
       <j:choose>
         <j:when test="${attrs.lazy!=null and !attrs.selected}">
           <l:renderOnDemand capture="${attrs.lazy}" tag="tr">
@@ -65,7 +64,7 @@ THE SOFTWARE.
           <d:invokeBody />
         </j:otherwise>
       </j:choose>
-      <tr class="dropdownList-end rowvg-end" />
+      </div>
     </j:when>
   </j:choose>
 </j:jelly>
