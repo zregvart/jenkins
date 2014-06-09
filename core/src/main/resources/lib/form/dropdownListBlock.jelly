@@ -56,7 +56,7 @@ THE SOFTWARE.
         </j:if>
       <j:choose>
         <j:when test="${attrs.lazy!=null and !attrs.selected}">
-          <l:renderOnDemand capture="${attrs.lazy}" tag="tr">
+          <l:renderOnDemand capture="${attrs.lazy}" tag="div">
             <d:invokeBody />
           </l:renderOnDemand>
         </j:when>
