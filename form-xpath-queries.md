@@ -23,11 +23,11 @@ The following table records the form tags and their contextual locations
 <tr><td>*</td><td>checkbox</td><td>N/A</td></tr>
 <tr><td>*</td><td>combobox</td><td>N/A</td></tr>
 <tr><td>table</td><td>description</td><td>*</td></tr>
-<tr><td></td><td>descriptorList</td><td></td></tr>
-<tr><td></td><td>descriptorRadioList</td><td></td></tr>
-<tr><td></td><td>dropdownDescriptorSelector</td><td></td></tr>
-<tr><td></td><td>dropdownList</td><td></td></tr>
-<tr><td></td><td>dropdownListBlock</td><td></td></tr>
+<tr><td>table</td><td>descriptorList</td><td>tr</td></tr>
+<tr><td>table</td><td>descriptorRadioList</td><td>tr</td></tr>
+<tr><td>table</td><td>dropdownDescriptorSelector</td><td>when <code>dropdownListMode=='createSelectField'</code> then <code>option</code><br/>when <code>dropdownListMode=='generateEntries'</code> then <code>tr</code></td></tr>
+<tr><td>table</td><td>dropdownList</td><td>when <code>dropdownListMode=='createSelectField'</code> then <code>option</code><br/>when <code>dropdownListMode=='generateEntries'</code> then <code>tr</code></td></tr>
+<tr><td>when <code>dropdownListMode=='createSelectField'</code> then <code>select</code><br/>when <code>dropdownListMode=='generateEntries'</code> then <code>table</code></td><td>dropdownListBlock</td><td>tr</td></tr>
 <tr><td></td><td>editableComboBox</td><td></td></tr>
 <tr><td></td><td>editableComboBoxValue</td><td></td></tr>
 <tr><td>table</td><td>entry</td><td>*</td></tr>
@@ -39,7 +39,7 @@ The following table records the form tags and their contextual locations
 <tr><td></td><td>hetero-list</td><td></td></tr>
 <tr><td></td><td>hetero-radio</td><td></td></tr>
 <tr><td></td><td>invisibleEntry</td><td></td></tr>
-<tr><td></td><td>nested</td><td></td></tr>
+<tr><td>table</td><td>nested</td><td>*</td></tr>
 <tr><td></td><td>number</td><td></td></tr>
 <tr><td></td><td>option</td><td></td></tr>
 <tr><td></td><td>optionalBlock</td><td></td></tr>
