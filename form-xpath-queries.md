@@ -38,14 +38,14 @@ The following table records the form tags and their contextual locations
 <tr><td>*</td><td>form</td><td>tr</td><td></td></tr>
 <tr><td>table</td><td>helpArea</td><td>N/A</td><td></td></tr>
 <tr><td>*</td><td>hetero-list</td><td>*</td><td></td></tr>
-<tr><td>*</td><td>hetero-radio</td><td>N/A</td><td></td></tr>
-<tr><td></td><td>invisibleEntry</td><td></td><td></td></tr>
+<tr><td>*</td><td>hetero-radio</td><td>N/A</td><td>includes descriptor config pages expecting <code>tr</code> children</td></tr>
+<tr><td>table</td><td>invisibleEntry</td><td>*</td><td></td></tr>
 <tr><td>table</td><td>nested</td><td>*</td><td></td></tr>
-<tr><td></td><td>number</td><td></td><td></td></tr>
-<tr><td></td><td>option</td><td></td><td></td></tr>
-<tr><td></td><td>optionalBlock</td><td></td><td></td></tr>
-<tr><td></td><td>optionalProperty</td><td></td><td></td></tr>
-<tr><td></td><td>password</td><td></td><td></td></tr>
+<tr><td>*</td><td>number</td><td>N/A</td><td></td></tr>
+<tr><td>select</td><td>option</td><td>CDATA or other text</td><td></td></tr>
+<tr><td>table</td><td>optionalBlock</td><td>tr</td><td></td></tr>
+<tr><td>table</td><td>optionalProperty</td><td>N/A</td><td>includes descriptor config pages expecting <code>tr</code> children</td></tr>
+<tr><td>*</td><td>password</td><td>N/A</td><td></td></tr>
 <tr><td>*</td><td>prepareDatabinding</td><td>N/A</td><td></td></tr>
 <tr><td></td><td>property</td><td></td><td></td></tr>
 <tr><td></td><td>radio</td><td></td><td></td></tr>
