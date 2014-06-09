@@ -407,7 +407,7 @@ var tooltip;
 //========================================================
 // using tag names in CSS selector makes the processing faster
 function registerValidator(e) {
-    e.targetElement = findElementsBySelector(e, "DIV.validation-error-area")[0].firstChild.nextSibling;
+    e.targetElement = findElementsBySelector(e, "DIV.validation-error-content")[0];
     e.targetUrl = function() {
         var url = this.getAttribute("checkUrl");
         var depends = this.getAttribute("checkDependsOn");
@@ -475,7 +475,7 @@ function registerValidator(e) {
 }
 
 function registerRegexpValidator(e,regexp,message) {
-    e.targetElement = findFollowingTR(e, "validation-error-area").firstChild.nextSibling;
+    e.targetElement = findElementsBySelector(e, "DIV.validation-error-content");
     var checkMessage = e.getAttribute('checkMessage');
     if (checkMessage) message = checkMessage;
     var oldOnchange = e.onchange;
@@ -1085,14 +1085,15 @@ var jenkinsRules = {
         if(isInsideRemovable(e))    return;
 
         var subForms = [];
-        var start = $(findFollowingTR(e, 'dropdownList-container')).down().next(), end;
+        var start = $(findElementsBySelector(e.parentNode.parentNode, 'DIV.dropdownList-container')[0]);
         do { start = start.firstChild; } while (start && start.tagName != 'TR');
 
-        if (start && !Element.hasClassName(start,'dropdownList-start'))
-            start = findFollowingTR(start, 'dropdownList-start');
+        while (start && start.tagName != 'DIV' && !Element.hasClassName(start,'dropdownList'))
+            start = start.nextSibling;
         while (start != null) {
             subForms.push(start);
-            start = findFollowingTR(start, 'dropdownList-start');
+            while (start && start.tagName != 'DIV' && !Element.hasClassName(start,'dropdownList'))
+                start = start.nextSibling;
         }
 
         // control visibility
@@ -1102,15 +1103,15 @@ var jenkinsRules = {
                 var f = $(subForms[i]);
 
                 if (show)   renderOnDemand(f.next());
-                f.rowVisibilityGroup.makeInnerVisisble(show);
+                f.style.display = show ? "" : "none";
 
                 // TODO: this is actually incorrect in the general case if nested vg uses field-disabled
                 // so far dropdownList doesn't create such a situation.
-                f.rowVisibilityGroup.eachRow(true, show?function(e) {
-                    e.removeAttribute("field-disabled");
-                } : function(e) {
-                    e.setAttribute("field-disabled","true");
-                });
+                if (show) {
+                    f.removeAttribute("field-disabled");
+                } else {
+                    f.setAttribute("field-disabled","true");
+                }
             }
         }
 
