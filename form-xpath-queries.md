@@ -18,11 +18,11 @@ The following table records the form tags and their contextual locations
 <tr><td>*</td><td>apply</td><td>N/A</td></tr>
 <tr><td>table</td><td>block</td><td>*</td></tr>
 <tr><td>*</td><td>booleanRadio</td><td>N/A</td></tr>
-<tr><td></td><td>bottomButtonBar</td><td></td></tr>
-<tr><td></td><td>breadcrumb-config-outline</td><td></td></tr>
-<tr><td></td><td>checkbox</td><td></td></tr>
-<tr><td></td><td>combobox</td><td></td></tr>
-<tr><td></td><td>description</td><td></td></tr>
+<tr><td>table</td><td>bottomButtonBar</td><td>*</td></tr>
+<tr><td>table</td><td>breadcrumb-config-outline</td><td></td></tr>
+<tr><td>*</td><td>checkbox</td><td>N/A</td></tr>
+<tr><td>*</td><td>combobox</td><td>N/A</td></tr>
+<tr><td>table</td><td>description</td><td>*</td></tr>
 <tr><td></td><td>descriptorList</td><td></td></tr>
 <tr><td></td><td>descriptorRadioList</td><td></td></tr>
 <tr><td></td><td>dropdownDescriptorSelector</td><td></td></tr>
@@ -30,7 +30,7 @@ The following table records the form tags and their contextual locations
 <tr><td></td><td>dropdownListBlock</td><td></td></tr>
 <tr><td></td><td>editableComboBox</td><td></td></tr>
 <tr><td></td><td>editableComboBoxValue</td><td></td></tr>
-<tr><td></td><td>entry</td><td>*</td></tr>
+<tr><td>table</td><td>entry</td><td>*</td></tr>
 <tr><td></td><td>enum</td><td></td></tr>
 <tr><td></td><td>enumSet</td><td></td></tr>
 <tr><td></td><td>expandableTextbox</td><td></td></tr>
@@ -55,8 +55,8 @@ The following table records the form tags and their contextual locations
 <tr><td></td><td>repeatableHeteroProperty</td><td></td></tr>
 <tr><td></td><td>repeatableProperty</td><td></td></tr>
 <tr><td></td><td>richtextarea</td><td></td></tr>
-<tr><td></td><td>rowSet</td><td></td></tr>
-<tr><td></td><td>section</td><td></td></tr>
+<tr><td>table</td><td>rowSet</td><td>tr</td></tr>
+<tr><td>table</td><td>section</td><td>tr</td></tr>
 <tr><td></td><td>select</td><td></td></tr>
 <tr><td></td><td>slave-mode</td><td></td></tr>
 <tr><td></td><td>submit</td><td></td></tr>
