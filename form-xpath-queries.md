@@ -37,7 +37,7 @@ The following table records the form tags and their contextual locations
 <tr><td>*</td><td>expandableTextbox</td><td>N/A</td><td></td></tr>
 <tr><td>*</td><td>form</td><td>tr</td><td></td></tr>
 <tr><td>table</td><td>helpArea</td><td>N/A</td><td></td></tr>
-<tr><td>*</td><td>hetero-list</td><td>*</td><td></td></tr>
+<tr><td>*</td><td>hetero-list</td><td>*</td><td>includes descriptor config pages expecting <code>tr</code> children</td></tr>
 <tr><td>*</td><td>hetero-radio</td><td>N/A</td><td>includes descriptor config pages expecting <code>tr</code> children</td></tr>
 <tr><td>table</td><td>invisibleEntry</td><td>*</td><td></td></tr>
 <tr><td>table</td><td>nested</td><td>*</td><td></td></tr>
@@ -53,7 +53,7 @@ The following table records the form tags and their contextual locations
 <tr><td>*</td><td>readOnlyTextbox</td><td>N/A</td><td></td></tr>
 <tr><td>*</td><td>repeatable</td><td>*</td><td></td></tr>
 <tr><td>*</td><td>repeatableDeleteButton</td><td>N/A</td><td></td></tr>
-<tr><td></td><td>repeatableHeteroProperty</td><td></td><td></td></tr>
+<tr><td>*</td><td>repeatableHeteroProperty</td><td>N/A</td><td>includes descriptor config pages expecting <code>tr</code> children</td></tr>
 <tr><td>*</td><td>repeatableProperty</td><td>tr</td><td></td></tr>
 <tr><td>*</td><td>richtextarea</td><td>N/A</td><td></td></tr>
 <tr><td>table</td><td>rowSet</td><td>tr</td><td></td></tr>
@@ -66,3 +66,48 @@ The following table records the form tags and their contextual locations
 <tr><td>table</td><td>validateButton</td><td>N/A</td><td></td></tr>
 <tr><td>*</td><td>withCustomDescriptorByName</td><td>*</td><td></td></tr></tbody>
 </table>
+
+## Tag structure to convert
+
+    <table>
+        <!-- start f:entry -->
+        <tr>
+          <td class="setting-leftspace">&nbsp;</td>
+          <td class="setting-name">...</td>
+          <td class="setting-main">...</td>
+          <td class="setting-help"><a class="help-button"><img/></a></td>
+        </tr>
+        <tr class=validation-error-area>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td class="setting-description">...</td>
+        </tr>
+        <tr class="help-area">
+          <td/>
+          <td colspan="2">
+            <div class="help">...</div>
+          </td>
+          <td/>
+        </tr>
+        <!-- end f:entry -->
+    </table>
+
+## Tag structure to convert to
+
+    <div class="setting-form">
+        <!-- start f:entry -->
+        <div class="setting-entry">
+          <div class="setting-leftspace">&nbsp;</div>
+          <div class="setting-name">...</div>
+          <div class="setting-main">...</div>
+          <div class="setting-help"><a class="help-button"><img/></a></div>
+          <div class=validation-error-area></div>
+          <div class="setting-description">...</div>
+          <div class="help-area">
+            <div class="help">...</div>
+          </div>
+        </div>
+        <!-- end f:entry -->
+    </div>
