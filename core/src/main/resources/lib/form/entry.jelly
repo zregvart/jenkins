@@ -65,7 +65,6 @@ THE SOFTWARE.
   <!-- expose this so that we can look up the @field value later from prepareDatabinding.jelly -->
   <j:set var="entry" value="${attrs}" />
   <div class="setting-entry">
-    <div class="setting-leftspace"><st:nbsp/></div>
     <div class="setting-name">
       <j:out value="${attrs.title}" />
     </div>

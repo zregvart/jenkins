@@ -70,6 +70,8 @@ THE SOFTWARE.
   <j:if test="${attrs.help!=null}">
     <f:helpArea />
   </j:if>
-	<d:invokeBody />
+    <div class="radio-block-content">
+      <d:invokeBody />
+    </div>
   </div>
 </j:jelly>

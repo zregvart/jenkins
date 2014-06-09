@@ -8,18 +8,9 @@ var radioBlockSupport = {
     },
 
     // update one block based on the status of the given radio button
-    updateSingleButton : function(radio, blockStart, blockEnd) {
+    updateSingleButton : function(radio, blockContent) {
         var show = radio.checked;
-        blockStart = $(blockStart);
-
-        if (blockStart.getAttribute('hasHelp') == 'true') {
-            n = blockStart.next();
-        } else {
-            n = blockStart;
-        }
-        while((n = n.next()) != blockEnd) {
-          n.style.display = show ? "" : "none";
-        }
+        blockContent.style.display = show ? "" : "none";
         layoutUpdateCallback.call();
     }
 };
@@ -42,25 +33,14 @@ Behaviour.specify("INPUT.radio-block-control", 'radioBlock', -100, function(r) {
             g.buttons = [];
         }
 
-        var s = findAncestorClass(r,"radio-block-start");
+        var s = findAncestorClass(r,"radio-block");
         s.setAttribute("ref", r.id);
 
         // find the end node
-        var e = (function() {
-            var e = s;
-            var cnt=1;
-            while(cnt>0) {
-                e = $(e).next();
-                if (Element.hasClassName(e,"radio-block-start"))
-                    cnt++;
-                if (Element.hasClassName(e,"radio-block-end"))
-                    cnt--;
-            }
-            return e;
-        })();
+        var e = findElementsBySelector(s,"DIV.radio-block-content")[0];
 
         var u = function() {
-            g.updateSingleButton(r,s,e);
+            g.updateSingleButton(r,e);
         };
         g.buttons.push(u);
 
