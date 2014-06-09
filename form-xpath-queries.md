@@ -63,5 +63,5 @@ The following table records the form tags and their contextual locations
 <tr><td></td><td>textarea</td><td></td></tr>
 <tr><td></td><td>textbox</td><td></td></tr>
 <tr><td></td><td>validateButton</td><td></td></tr>
-<tr><td></td><td>withCustomDescriptorByName</td><td></td></tr></tbody>
+<tr><td>*</td><td>withCustomDescriptorByName</td><td>*</td></tr></tbody>
 </table>
