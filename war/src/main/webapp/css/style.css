@@ -223,19 +223,18 @@ pre.console {
   width: 2em;
 }
 
-.setting-name {
-  font-weight: bold;
-  white-space: nowrap;
+.setting-main, .setting-help {
+  display: inline-block;
 }
 
 .setting-main {
-  width: 90%; /* try to make this column as big as possible. */
+  width: 95%; /* try to make this column as big as possible. */
+  font-weight: bold;
+  white-space: nowrap;
 }
 .setting-help {
   width: 16px;
-}
-.setting-main, .setting-help {
-  float: left;
+  margin-left: 15px;
 }
 
 .setting-input {
