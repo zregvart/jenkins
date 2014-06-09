@@ -37,6 +37,7 @@ THE SOFTWARE.
   </st:documentation>
 
   <st:adjunct includes="lib.form.section_" />
+  <div class="setting-section">
   <f:rowSet name="${attrs.name}">
     <j:if test="${attrs.title!=null}">
       <f:block>
@@ -47,4 +48,5 @@ THE SOFTWARE.
     </j:if>
     <d:invokeBody />
   </f:rowSet>
+  </div>
 </j:jelly>
