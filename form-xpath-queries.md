@@ -9,15 +9,15 @@ The following table records the form tags and their contextual locations
 
 <table>
 <thead>
-<th>Parent context</th>
+<th>Parent assumed to be a _ element</th>
 <th>Tag</th>
-<th>Child context</th>
+<th>Child assumed to be _ element(s)</th>
 </thead>
 <tbody>
-<tr><td></td><td>advanced</td><td></td></tr>
-<tr><td></td><td>apply</td><td></td></tr>
-<tr><td></td><td>block</td><td></td></tr>
-<tr><td></td><td>booleanRadio</td><td></td></tr>
+<tr><td>table</td><td>advanced</td><td>tr</td></tr>
+<tr><td>*</td><td>apply</td><td>N/A</td></tr>
+<tr><td>table</td><td>block</td><td>*</td></tr>
+<tr><td>*</td><td>booleanRadio</td><td>N/A</td></tr>
 <tr><td></td><td>bottomButtonBar</td><td></td></tr>
 <tr><td></td><td>breadcrumb-config-outline</td><td></td></tr>
 <tr><td></td><td>checkbox</td><td></td></tr>
